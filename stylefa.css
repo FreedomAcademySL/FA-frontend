@@ -1,0 +1,2146 @@
+/*------------ Google font -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+:root {
+  /*--------- Color variable ---------*/
+  --Grey: #111111;
+  --LightGrey: #f1f1f1;
+  --SemiLightGrey: rgba(241, 241, 241, 0.7);
+  --TertiaryBg: #212121;
+  --GoldenPrimary: #cbb26a;
+  --GoldenPrimaryDark: #998750;
+  --GoldenSecondary: #ede9d9;
+  --Constrast: #ffffff;
+  --Contrast2: #f7f1f1;
+  --Bookblue: #7498cf;
+  --BookblueLight: #c3d9f7;
+  --SemiDarkGrey: #3e3f3f;
+  --SuccessMessage: #008000;
+  --FailedMessage: #fc100d;
+
+  /*---------- Font size ------------*/
+  --heading-font-size: 1.5rem;
+  --paragraph-font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 0 auto;
+  margin-right: 0;
+}
+
+.top-icons {
+  
+  top: 20px;
+
+  z-index: 999;
+  margin-right: 0;
+}
+
+.icon-link {
+ 
+  text-decoration: none;
+  color: var(--GoldenPrimary); /* Set the color to dark golden */
+  margin-left: 10px; /* Add some spacing between the icons */
+  font-size: 24px; /* Adjust the font size as needed */
+  transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+.icon-link:hover {
+
+  color: var(--GoldenPrimaryDark); /* Change the color on hover */
+}
+
+.heading {
+  color: var(--Grey);
+  font-size: var(---heading--font-size);
+  font-weight: 600;
+}
+
+.heading-contrast {
+  color: var(--Constrast);
+  font-size: var(---heading--font-size);
+  font-weight: 600;
+}
+
+.para-line {
+  color: var(--Grey);
+  font-size: var(---paragraph--font-size);
+  text-align: center;
+}
+
+.para-line-justificado {
+  color: var(--Grey);
+  font-size: var(---paragraph--font-size);
+  text-align: justify;
+}
+
+.para-line-contrast {
+  color: var(--Constrast);
+  font-size: var(---paragraph--font-size);
+  text-align: justify;
+}
+
+.para-lineheader {
+  color: var(--Grey);
+  font-size: var(---paragraph--font-size);
+  text-align: justify;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.white {
+  color: var(--Constrast);
+}
+
+.btn {
+  background-color: var(--Constrast);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn2 {
+  background-color: var(--GoldenPrimary);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.btn a {
+  color: var(--Grey);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.border-btn {
+  border: 2px solid var(--Grey);
+  margin: 1.5rem 0;
+  transition: 0.5s;
+}
+
+.border-btn:hover {
+  background: var(--Grey);
+}
+
+.border-btn:hover a {
+  color: var(--Constrast);
+}
+
+.btn.btn-white:hover {
+  background-color: #f2f2f2;
+  /* Set a slightly darker shade on hover */
+}
+
+.btn2 a {
+  color: var(--Grey);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.border-btn2 {
+  border: 1.5px solid var(--Grey);
+  margin: 1rem 0;
+  transition: 0.5s;
+}
+
+.btn2.btn-white:hover {
+  background-color: #dbba56;
+  /* Set a slightly darker shade on hover */
+}
+
+.divider {
+  width: 10px;
+  height: 10px;
+  stroke-opacity: 40%;
+  background-image: var(--GoldenPrimary);
+  margin: 0 auto;
+}
+
+.button-container {
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------- Home section start -----------------*/
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  /* Adjust the top position for the logo */
+  left: 1rem;
+  /* Adjust the left position for the logo */
+  z-index: 1;
+  /* Ensure the logo is above the header bar */
+  /* Add any additional styles for the logo, such as width, height, etc. */
+}
+
+.home .container {
+  height: calc(100vh - 2rem);
+  /* Subtract the logo height from the container height */
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+/* Add styles for the header bar */
+.header {
+  position: relative;
+  top: 72px;
+  /* Position the header at 30% from the top of the container */
+  left: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Display header items in a column */
+  justify-content: center;
+  align-items: left;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Set the background color for the header bar */
+  color: var(--Constrast);
+  /* Set the text color for the header items */
+  padding: 2rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a shadow to the header bar */
+}
+
+.header .header-logo {
+  width: 96px;
+  margin-bottom: 32px;
+}
+
+/* Add styles for the header bar in the program landing page*/
+.headerprogram {
+  position: relative;
+  top: 72px;
+  /* Position the header at 30% from the top of the container */
+  left: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Display header items in a column */
+  justify-content: center;
+  align-items: left;
+  /* Set the background color for the header bar */
+  color: var(--Constrast);
+  /* Set the text color for the header items */
+  padding: 2rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a shadow to the header bar */
+}
+/* Add styles for the header items */
+.header-item {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  /* Add some vertical spacing between header items */
+  /* Add more styles as needed */
+}
+
+.empty-div {
+  height: 1rem;
+  /* Set the height to create the visual separation */
+
+  /* Styles for the content below the header */
+  /* Add your styles for the content sections here */
+  /* For example, you can use .section-about, .section-book, .section-freedom-academy, etc. */
+}
+
+.badge {
+  background-color: var(--GoldenPrimary);
+  /* Set the background color of the badge */
+  color: var(--Constrast);
+  /* Set the text color of the badge */
+  font-size: 0.8rem;
+  /* Set the font size of the badge text */
+  padding: 0.2rem 0.5rem;
+  /* Add some padding around the badge text */
+  border-radius: 3px;
+  /* Add rounded corners to the badge */
+  margin-left: 5px;
+  /* Adjust the spacing between the text and the badge */
+}
+
+.badge2 {
+  background-color: var(--GoldenPrimary);
+  /* Set the background color of the badge */
+  color: var(--Constrast);
+  /* Set the text color of the badge */
+  font-size: 1rem;
+  /* Set the font size of the badge text */
+  padding: 0.2rem 0.5rem;
+  /* Add some padding around the badge text */
+  border-radius: 3px;
+  /* Add rounded corners to the badge */
+  margin-left: 8px;
+  /* Adjust the spacing between the text and the badge */
+}
+.social-icon {
+  width: 30px;
+  /* Adjust the width as needed */
+  height: 30px;
+  /* Adjust the height as needed */
+  margin-right: 10px;
+  /* Add some spacing between the icons */
+  display: inline-block;
+  /* Add this line */
+}
+
+.header-item {
+  display: inline-block;
+  margin-right: 10px;
+  /* Add some spacing between the icons */
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/*--------------- Home section end -----------------*/
+
+/*--------------- Hero Program start -----------------*/
+.heroprogram {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--Grey);
+  /* Set black background color */
+}
+
+/* Modify the styles for the headerprogram container */
+.heroprogram .container {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Grey);
+  background-image: url(img/Logo-removebg.png);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: calc(5% + 5%);
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+/* Add styles for the left-aligned links */
+.heroprogram .left-links {
+  position: absolute;
+  top: 50%;
+  left: 5%; /* Adjust the left position as needed */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* Display the links in a column */
+}
+
+.heroprogram .left-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.heroprogram .left-links ul li {
+  margin-bottom: 10px; /* Add spacing between the list items */
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--GoldenPrimaryDark); /* Change this to the desired text color */
+  font-weight: bold;
+  height: 50px; /* Adjust the height as needed */
+}
+
+.separator-text {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+Make sure to adjust the background color, text color, height, and font size to match your design preferences. This code will create a separator row with "Stage II" in the center after Session 8.
+
+
+
+
+
+
+
+/*--------------- Hero section start -----------------*/
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--Grey);
+  /* Set black background color */
+}
+
+.hero .container {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Grey);
+  /* Set black background color */
+  background-image: url(img/Logo-removebg.png);
+  background-size: 80%;
+  /* Increase size by 30% */
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: calc(50% + 5%);
+  /* Move 10% above the center */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+/*--------------- Hero section end -----------------*/
+
+/*--------------- Hero 2 section start -----------------*/
+
+.hero2 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--Grey);
+}
+
+.hero2 .container {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Grey);
+  /* Set black background color */
+  background-image: url(img/brain.png);
+  background-size: 55%;
+  /* Increase size by 30% */
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: calc(30% +10%);
+  /* Move 10% above the center */
+}
+
+/* Additional styles for the .hero2 section */
+.hero2 .hero-content2 h1 {
+  font-style: normal;
+  color: var(--Constrast);
+  margin-bottom: 24px;
+}
+
+.hero2 .link-book {
+  background-color: var(--GoldenPrimary);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--Grey);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*--------------- Hero 2 section end -----------------*/
+
+/*--------------- Container section start --------------*/
+
+.section-container {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  place-content: center;
+  grid-gap: 24px;
+  padding: 0 8px;
+}
+
+.section-container .section-text {
+  font-size: 11px;
+}
+
+.section-container .section-text h2 {
+  font-weight: 600;
+  font-size: 165%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 576px) {
+  .section-container {
+    padding: 24px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-container .section-img {
+    order: 1;
+  }
+
+  .section-container .section-text h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .section-container .section-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container .section-text {
+    font-size: 16px;
+  }
+
+  .section-container .section-text h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+/*--------------- Container section end --------------*/
+
+/*--------------- About section start --------------*/
+.section-about {
+  background: linear-gradient(180deg, var(--Grey), var(--Constrast));
+  color: var(--Constrast);
+}
+
+.about {
+  margin: 0;
+  /* Remove the margin to eliminate the gap between hero and about sections */
+  background: linear-gradient(180deg, var(--Grey), var(--Constrast));
+  padding: 16px;
+  /* Add some padding to the content inside the section */
+  height: 100vh;
+}
+
+.about .container {
+  max-width: 1200px;
+  /* Set a maximum width for the container to control the content width */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  text-align: left;
+}
+
+.about .row {
+  display: grid;
+}
+
+.about-img {
+  border-radius: 2rem;
+}
+
+/* Improve the button style */
+.about .btn {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: var(--GoldenPrimary);
+  /* Set a primary button color */
+  color: var(--Constrast);
+  /* Set button text color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about .btn a {
+  text-decoration: none;
+  color: var(--Constrast);
+}
+
+.about .btn ion-icon {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.about .btn:hover {
+  background-color: #d7d7d7;
+  /* Set a darker shade on hover */
+}
+
+.section-text h3 {
+  font-size: 2.2rem; /* You can adjust the font size as needed */
+}
+
+/*--------------- About section end --------------*/
+
+/*--------------- Course category section start --------------*/
+.category {
+  background: linear-gradient(
+    180deg,
+    var(--Constrast) 50%,
+    var(--GoldenSecondary)
+  );
+  margin: 0;
+}
+
+.category .container {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.success-card,
+.category-card {
+  background-color: var(--Constrast);
+  padding: 16px 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 8px 0;
+}
+
+.success-icon,
+.category-icon {
+  color: var(--Grey);
+  font-size: 32px;
+}
+
+.success-name,
+.category-name {
+  color: var(--Grey);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .category .section-container {
+    grid-template-columns: auto;
+  }
+
+  .category .section-text {
+    text-align: center;
+  }
+
+  .category .category-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .category .category-name {
+    font-size: 18px;
+  }
+
+  .category .category-row {
+    gap: 24px;
+  }
+
+  .category .category-card {
+    padding: 16px 24px;
+  }
+}
+
+/*--------------- Course category section end --------------*/
+
+/*--------------- Facility section start --------------*/
+.facilities {
+  margin: 0;
+  background-color: #fff;
+}
+
+.facilities .section-img {
+  height: 160px;
+  width: auto;
+}
+
+.facility-box {
+  margin: 2rem 0;
+}
+
+.facility-icon {
+  font-size: 2.2rem;
+  color: var(--Grey);
+}
+
+/* Add this CSS rule to make the logo 30% bigger */
+
+.facility-heading {
+  color: var(--Grey);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .facilities .section-img {
+    width: 100%;
+    height: auto;
+    order: 0;
+  }
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+/* Apply the proper styling to the card */
+.category-card-aboutus {
+  width: 380px;
+  /* Set a fixed width */
+  background-color: var(--Constrast);
+  margin: 1rem auto;
+  /* Center the cards horizontally */
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+  text-align: center;
+}
+
+/*--------------- Facility section end --------------*/
+
+/*--------------- Success section start --------------*/
+.success {
+  margin: 0;
+  background-color: var(--GoldenSecondary);
+}
+
+.success .container {
+  padding: 4rem 1.6rem;
+  text-align: center;
+}
+/*--------------- Success section end --------------*/
+
+/*--------------- Master section start -------------*/
+.master {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    var(--GoldenSecondary) 50%,
+    var(--Constrast)
+  ) !important;
+}
+
+.master .section-text {
+  text-align: center;
+}
+
+.masters-row {
+  margin: 1rem 0;
+  display: flex;
+}
+
+.master-card {
+  display: grid;
+  padding: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  justify-items: center;
+}
+
+.master-card .master-img {
+  margin-bottom: 32px;
+  width: 75%;
+  height: auto;
+  max-width: 320px;
+}
+
+.master-name {
+  font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .master .section-container {
+    grid-template-columns: auto;
+  }
+
+  .master .master-card {
+    width: 100%;
+  }
+
+  .master .link {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/*--------------- Master section end -------------*/
+
+/*--------------- Partner section start ----------*/
+.partner {
+  margin: 4rem 0;
+  background-color: var(--Grey);
+}
+
+.partner .container {
+  padding: 3.6rem 1.8rem;
+  text-align: center;
+}
+
+.partner-row {
+  margin: 2rem 0;
+}
+
+.partner-card {
+  margin: 1.5rem 0;
+  padding: 0.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+/*--------------- Partner section end ----------*/
+
+/*-------------- testimonial section start -------*/
+.testimonial {
+  background: linear-gradient(
+    180deg,
+    var(--Constrast),
+    var(--GoldenSecondary) 40%
+  ) !important;
+  height: 100vh;
+}
+
+.testimonial .container {
+  padding: 3.6rem 1.8rem;
+  text-align: center;
+}
+
+.testimonial .section-text {
+  text-align: center;
+}
+
+.testimonial-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 100%);
+  grid-gap: 0 16px;
+  overflow-x: scroll;
+  margin: 0 16px;
+  max-width: 100%;
+}
+
+.testimonial-card {
+  text-align: center;
+  border-radius: 22px;
+  background-color: #ffffff;
+  padding: 1rem 1rem 1rem 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  position: relative;
+  display: grid;
+  gap: 16px 0;
+}
+
+.testimonial-card::before {
+  content: '★★★★★';
+  align-content: center;
+  position: relative;
+  top: +30x;
+  /* Adjust the position as needed */
+  left: 0;
+  color: var(--GoldenPrimary);
+  font-size: 24px;
+  /* Double the original font size */
+}
+
+.testimonial-card p {
+  font-size: 14px;
+}
+
+.testimonial .avatar-card {
+  display: grid;
+  justify-items: center;
+}
+
+.testimonial .avatar-card .student-name {
+  align-self: end;
+}
+
+.student-img {
+  width: 50px;
+  border: none;
+  margin-right: 0;
+  border-radius: 50px;
+  align-items: center;
+}
+
+.student-name {
+  color: var(--Grey);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .testimonial .section-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .testimonial-row {
+    grid-template-columns: repeat(3, 50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*-------------- testimonial section end -------*/
+
+/*-------------- testimonial2 Book section start -------*/
+.testimonial2 {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    var(--Constrast),
+    var(--BookblueLight) 85%
+  ) !important;
+}
+
+.testimonial2 .container {
+  padding: 3.6rem 1.8rem;
+  text-align: center;
+}
+
+.testimonial2-row {
+  margin: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.testimonial2-card {
+  text-align: center;
+  margin: 1.4rem 0;
+  border-radius: 22px;
+  background-color: #ffffff;
+  padding: 1rem 1rem 1rem 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  position: relative;
+}
+
+.testimonial2-card::before {
+  content: '★★★★★';
+  align-content: center;
+  position: relative;
+  top: +30x;
+  /* Adjust the position as needed */
+  left: 0;
+  color: var(--GoldenPrimary);
+  font-size: 24px;
+  /* Double the original font size */
+}
+/*-------------- testimonial section end -------*/
+
+/*-------------- Footer section start -----------*/
+footer {
+  background: linear-gradient(
+    180deg,
+    var(--GoldenSecondary) 0%,
+    var(--GoldenPrimary) 30%,
+    var(--Grey) 100%
+  );
+}
+
+footer .container {
+  height: 100vh;
+  padding: 0m;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+footer img {
+  max-width: 160px;
+  position: absolute;
+  bottom: 24px;
+}
+
+footer .disclaimercopyright {
+  font-style: normal;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--GoldenPrimary);
+  justify-content: flex-end;
+}
+
+/*-------------- Footer section end -----------*/
+
+/*------------------------------------------------------*/
+/*--------------- Desktop screen media query --------------*/
+/*------------------------------------------------------*/
+
+:root {
+  /*---------- Font size ------------*/
+  ---heading--font-size: 3rem;
+  ---paragraph--font-size: 1rem;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  /* padding: 6rem 5rem; */
+  padding: 0 8px;
+}
+
+.container2 {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem 3rem;
+}
+
+.container .heading {
+  line-height: 1;
+}
+
+.container .para-line {
+  margin: 1.2rem 0;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container .btn {
+  margin-right: 0px;
+  border: 2px solid var(--Grey);
+  margin: 1.5rem 0;
+  transition: 0.5s;
+}
+
+.wrapper {
+  border: 2px solid var(--Grey);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.col {
+  width: 100%;
+}
+
+/*--------------- Hero section ------------*/
+.hero-content {
+  max-width: 720px;
+}
+
+/*--------------- Category section -------------*/
+
+.category .container {
+  padding: 5rem 2rem;
+  text-align: center;
+
+  background-position: center center;
+  background-size: 100% 100%;
+  /* Change the background size to cover the entire container */
+  width: 100%;
+  background-repeat: no-repeat;
+  /* Make sure the background image doesn't repeat */
+}
+
+.category .container .para-line {
+  margin: 1.2rem auto;
+}
+
+.success-row,
+.category-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  padding: 16px 0;
+}
+
+.success-icon,
+.category-icon {
+  font-size: 2rem;
+}
+
+.category-course {
+  margin: 0 !important;
+}
+
+/*------------- Facilities --------------*/
+.facilities .container {
+  text-align: left;
+}
+
+.facility-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.1rem;
+}
+
+.facility-icon {
+  font-size: 4rem;
+}
+
+.facility-desc {
+  margin: 0 !important;
+}
+
+/* New facility box styles */
+.facility-box-new {
+  text-align: center;
+  margin: 0.3rem 0;
+  /* Reduce the top and bottom margin */
+  border-radius: 10px;
+  background-color: var(--Constrast);
+  padding: 1rem 1rem 1rem 1rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 4px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  position: relative;
+  width: calc(33.33% - 20px);
+  /* Adjust the width to create the 3-column layout with some gap */
+}
+
+.facility-box-new::before {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  width: 24px;
+  /* Set the width of your logo */
+  height: 24px;
+  /* Set the height of your logo */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 30%) {
+  .facility-box-new {
+    width: 30%;
+    /* Switch to full width on smaller screens */
+    margin: 1rem 0;
+  }
+
+  .master-content {
+    align-items: center;
+    /* Center align the master content on smaller screens */
+  }
+
+  .master-img-aboutus {
+    width: 30%;
+    /* Make the master photo full width on smaller screens */
+  }
+}
+
+/*----------- Success start -------------*/
+
+@media (min-width: 576px) {
+  .success .section-container {
+    grid-template-columns: auto;
+  }
+
+  .success .section-text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .success .section-text h2 {
+    font-size: 40px;
+  }
+
+  .success .success-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 24px;
+  }
+
+  .success .success-name {
+    font-size: 24px;
+  }
+
+  .success .success-icon {
+    font-size: 40px;
+  }
+}
+
+/*------------ Partner section -----------*/
+.partner {
+  background: url(img/category-bg-dark.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.partner .container .para-line {
+  max-width: 700px;
+  margin: 1.2rem auto;
+}
+
+.partner-row {
+  margin: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/*----------- Testimonial section ----------*/
+
+/*---------- Footer ------------*/
+footer .container {
+  height: 100vh;
+}
+
+.cta-heading {
+  font-size: 2rem;
+}
+
+footer .container .para-line {
+  max-width: 700px;
+  margin: 0.5rem auto;
+}
+
+/*---------- Book ------------*/
+/* Add this style to make the line bigger and centered */
+.testimonial-heading {
+  font-size: 36px;
+  /* Adjust the font size as needed */
+  text-align: center;
+}
+
+.disclaimer2 {
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--Grey);
+}
+
+.containerbook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 40px;
+}
+
+.containerbook img {
+  max-width: 160px;
+}
+
+/* The rest of your CSS styles for the testimonials section */
+
+/*---------- Audio ------------*/
+
+/* Audio Player container */
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 20vh;
+  background-color: var(--Grey);
+}
+
+/* Style the progress bar */
+audio::-webkit-media-controls-progress-bar {
+  background-color: var(--Grey);
+  height: 1px;
+  border-radius: 1px;
+}
+
+/* Style the progress bar fill */
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-playback-rate-button,
+audio::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
+/*---------- Home ------------*/
+
+/* Custom styling for anchor tags */
+.header-item a {
+  text-decoration: none;
+  /* Remove the underline */
+  transition: transform 0.3s;
+  /* Add smooth transition effect */
+  color: var(--Constrast);
+  /* Set the link color (you can use any color you prefer) */
+}
+
+/* Optional: Add a hover effect */
+.header-item a:hover {
+  transform: scale(1.1);
+  color: var(--GoldenPrimary);
+  /* Change the link color on hover (you can use any color you prefer) */
+}
+
+.mailto {
+  background-color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.mailto .link {
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+}
+
+.body-book,
+.body-aboutus {
+  background-color: #fff;
+}
+
+.body-aboutus .master-img-aboutus {
+  width: 75%;
+  max-width: 480px;
+}
+
+.body-book .section-book {
+  padding: 16px;
+}
+
+.body-book .section-book .section-container {
+  height: auto;
+}
+
+.body-book .section-book .section-img {
+  border-radius: 16px;
+}
+
+.body-book .section-book .link {
+  margin: 16px 0;
+}
+
+.body-book .testimonial-row {
+  margin-bottom: 16px;
+}
+
+.link {
+  border: 2px solid var(--Grey);
+  text-decoration: none;
+  display: flex;
+  border-radius: 4px;
+  padding: 8px 8px;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.link-email {
+  color: var(--GoldenPrimaryDark);
+}
+
+/*---------- Program ------------*/
+
+/* Add styles for the course sessions section */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.4rem;
+}
+
+.menu a {
+  color: var(--GoldenPrimary);
+  text-decoration: none;
+  margin-right: 10px; /* Adjust the spacing between menu items */
+  padding: 5px; /* Add padding around the menu items */
+  border-right: 2px solid transparent; /* Add a transparent right border */
+  transition: border-color 0.3s, color 0.3s; /* Add a transition for smooth color change */
+}
+
+.menu a:hover {
+  color: var(--GoldenPrimaryHover); /* Change the text color on hover */
+  border-right-color: var(
+    --GoldenPrimaryHover
+  ); /* Change the border color on hover */
+}
+
+.ul-li-container {
+  width: 80%;
+  margin: auto;
+  padding: 16px 8px;
+}
+
+.course-sessions {
+  background-color: var(--Grey); /* Adjust the background color as needed */
+  color: var(--GoldenPrimaryDark);
+  padding: 2rem;
+}
+
+.course-sessions h1 {
+  font-size: 1rem;
+  color: var(--GoldenPrimaryDark); /* Adjust the text color as needed */
+}
+
+.course-sessions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-sessions li {
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.session-number {
+  font-weight: bold;
+  margin-right: 1rem;
+  color: var(--Contrast2);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.session-title {
+  flex-grow: 1;
+  margin-right: 1rem;
+  color: var(--Constrast);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.sessions-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sessions-li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: space-between;
+  border: 0.2px groove var(--SemiDarkGrey);
+  border-radius: 1rem;
+}
+
+/* Style for "Done" sessions */
+.sessions-li.done {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: space-between;
+  border: 0.2px groove var(--SemiDarkGrey);
+  border-radius: 1rem;
+  /* Add any styles you want for "Done" sessions */
+}
+
+.sessions-li.pending {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: space-between;
+  color: rgba(241, 241, 241, 0.7);
+}
+
+.session-title.pending {
+  /* position: relative; */
+  filter: blur(5px);
+  /* color: transparent;
+  text-shadow: 0 0 13px rgba(255, 255, 255, 0.7); */
+   /* Apply a blur shadow with a white color text */
+}
+
+.sessions-li.pending.status-icon {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+.sessions-li.pending.video-icon {
+  color: rgba(241, 241, 241, 0.7);
+}
+.sessions-li.pending.notes-icon {
+  color: rgba(241, 241, 241, 0.7);
+}
+.sessions-li.pending.quiz-icon {
+  color: rgba(241, 241, 241, 0.7);
+}
+.sessions-li.pending .session-number {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+.sessions-li.pending .session-title {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+.sessions-li.pending .session-enable-date {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+.beta-test {
+  margin-top: 0.5rem;
+  margin-right: 0.6rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.session-container {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.session-icons-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .sessions-ul li {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .session-title,
+  .session-number {
+    position: relative;
+    padding: 1rem;
+    align-items: center;
+  }
+  .session-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .session-icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+}
+
+.completion-percentage {
+  color: var(--Constrast);
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Style for the progress bar container */
+.progress-bar-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 50%;
+  max-width: 100%;
+  height: 25px;
+  background-color: var(--GoldenSecondary);
+  border-radius: 30px;
+  /overflow: hidden;
+  box-shadow: 0 0 5px var(--Grey);
+}
+
+.progress-bar:hover .progress-fill {
+  background-color: var(--GoldenPrimaryDark);
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .progress-bar {
+    width: 60%;
+  }
+}
+
+.progress-bar-quiz {
+  width: 50%;
+  max-width: 100%;
+  height: 25px;
+  background-color: var(--GoldenSecondary);
+  border-radius: 30px;
+  /overflow: hidden;
+  box-shadow: 0 0 5px var(--Grey);
+  margin-left: 1rem;
+}
+
+.progress-bar-quiz:hover .progress-fill {
+  background-color: var(--GoldenPrimaryDark);
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .progress-bar-quiz {
+    width: 60%;
+  }
+}
+
+/* .progress-fill {
+  height: 100%;
+  background-color: var(--GoldenPrimaryDark);
+  width: 0;
+  transition: width 0.9s ease-in-out;
+} */
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--GoldenPrimaryDark);
+  width: 0; /* Initial width of the progress bar (0%) */
+  transition: width 0.9s ease-in-out;
+  border-radius: 30px; /* Match the outer container's corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--LightGrey);
+}
+
+/* Add styles for the video and notes icons (Ionicons) */
+.status-icon {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.3rem 0.5rem;
+  border-radius: 30px;
+  font-size: 1rem; /* Adjust the icon size as needed */
+  display: inline-block; /* Ensure the icon is displayed correctly */
+  width: 100px; /* Set a fixed width for the buttons */
+  text-align: center; /* Center the text horizontally within the button */
+  color: var(--Constrast);
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  margin-right: 10px; /* Add margin between badges and icons */
+}
+
+.video-icon {
+  color: var(--Constrast);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.notes-icon {
+  color: var(--Constrast);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.quiz-icon {
+  color: var(--Constrast);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.status-icon.done {
+  background-color: var(--GoldenPrimaryDark);
+}
+
+.status-icon.passed {
+  background-color: var(--SuccessMessage);
+}
+
+.status-icon.retake {
+  background-color: var(--GoldenPrimaryDark);
+}
+
+.status-icon.pending {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+/* Style for the header with the custom class "program-header" */
+.program-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--Grey);
+  padding: 0.5rem;
+  flex-direction: column; /* Add this line to stack items vertically */
+  margin-top: 2rem;
+}
+
+.program-header img {
+  width: 100px !important;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.program-title {
+  color: var(
+    --GoldenPrimaryDark
+  ); /* Set the text color to match the sessions */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.session-enable-date {
+  text-align: center;
+  margin-left: 1rem;
+  width: 150px;
+}
+
+/*---------- Login ------------*/
+
+/* Reset default styles and set the font-family */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'sans-serif', sans-serif;
+  background-color: var(
+    --Grey
+  ); /* Replace with Freedom Academy background color */
+  color: var(--GoldenPrimaryDark); /* Replace with Freedom Academy text color */
+  text-align: center;
+}
+
+/* Center the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  margin-top: 2.5rem; /* Add margin to the top */
+}
+
+.login-container {
+  text-align: center;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.signup-form {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  font-weight: normal;
+  width: 80%;
+}
+/* Style the logo */
+.login-logo img {
+  width: 320px; /* Adjust to your logo's dimensions */
+  height: auto;
+  transition: transform 0.8s ease;
+}
+
+/* Style the login form */
+
+.button-text {
+  display: flex;
+  justify-content: center;
+  aling-items: center;
+}
+
+.login-button-style {
+  width: 250px !important;
+}
+
+.login-button-text {
+  font-size: 1rem;
+}
+
+.form-main-reason-container {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  border-radius: 5px; /* You can adjust the radius as needed */
+  padding: 10px; /* Add padding for spacing inside the container */
+}
+
+.login-email-input {
+  width: 250px !important;
+}
+
+.email-error-message {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  aling-items: center;
+  color: red;
+  font-size: 0.875rem;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+  margin-bottom: 0.8rem;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='date'] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid var(--GoldenPrimaryDark);
+  border-radius: 5px;
+  transition: transform 0.8s ease;
+  text-align: center;
+}
+
+button {
+  background-color: var(--Grey);
+  color: var(--GoldenPrimaryDark);
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(201, 158, 97, 0.814);
+  transition: box-shadow 0.8s ease;
+  font-size: 0.85rem;
+  width: 25%;
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1;
+}
+
+button:hover {
+  box-shadow: 0 6px 8px (#3d3006); /* Adjust shadow on hover for a subtle effect */
+  background-color: var(--GoldenPrimaryDark);
+  color: var(--GoldenSecondary);
+  transition: box-shadow 0.8s ease; /* Add a smooth transition for the shadow */
+}
+
+/* Add styles for the second button with class "login-link-button" */
+.login-link-button {
+  display: inline-block;
+  background-color: transparent; /* Set a transparent background */
+  color: var(--GoldenPrimaryDark);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Remove underlines from links */
+  transition: box-shadow 0.8s ease;
+  width: 80%;
+  margin: 20px 0; /* Add equal top and bottom margins */
+  font-size: 0.85rem;
+}
+
+.login-link-button:hover {
+  box-shadow: none; /* Remove the box shadow on hover */
+  color: var(--GoldenSecondary);
+  transition: box-shadow 0.8s ease;
+}
+
+/* Style the line separator */
+.line-separator {
+  display: inline-block;
+  height: 1px; /* Set the height of the line */
+  width: 70%; /* Make it span the full width */
+  background-color: var(
+    --SemiDarkGrey
+  ); /* Don't forget the semicolon after the color value */
+  content: ' '; /* Add content to enable pseudo-element */
+}
+
+/* Style for the registration success message */
+.success-message {
+  background-color: var(--GoldenPrimary); /* Green background color */
+  color: var(--Grey); /* White text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some padding for spacing */
+  display: none; /* Hide the message by default */
+}
+.share-opinion-form {
+  font-size: 1rem;
+  color: var(--SemiLightGrey);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+// RECOMMENDED READINGS
+
+.table-container {
+  margin: 2rem;
+  padding: 3rem;
+}
+
+.recommended-title {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: var(--Contrast2);
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--LightGrey); /* Borders for the whole table */
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+/* Header Styles */
+th {
+  background-color: var(--SemiDarkGrey);
+  color: var(--Contrast);
+  border: 1px solid var(--SemiDarkGrey); /* Borders for header cells */
+  text-align: center; /* Center text in header cells only */
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Row Styles */
+tr {
+  background-color: var(--TertiaryBg);
+  color: var(--Contrast);
+  border: 1px solid var(--SemiDarkGrey); /* Borders for even rows */
+  font-size: 0.9rem;
+}
+
+/* Container Styles */
+.table-container {
+  background-color: var(--SemiDarkGrey);
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.animated-image {
+  width: 70%;
+  height: 70%;
+  animation: darkeningEffect 3s linear infinite; /* Adjust the animation properties as needed */
+}
+
+/* Quiz Styles */
+[class^='quiz-container-'] {
+  background-color: var(--TertiaryBg);
+  color: var(--Constrast);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: none; /* Hide the containers by default */
+}
+
+.quiz-question {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align options to the left */
+  align-items: flex-start;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.options {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.question-divider {
+  border: 1px solid rgba(203, 178, 106, 0.5);
+  margin: 1rem 0;
+  width: 100%; /* Center the divider */
+}
+
+input[type='radio'] {
+  margin-right: 0.5rem;
+}
+
+.quiz-submit-button {
+  width: 210px !important;
+}
+
+.quiz-submit-container {
+  display: flex;
+  justify-content: center; /* Align the content to the left */
+  align-items: center;
+}
+
+.fail-quiz-message {
+  position: fixed; /* Fixed position to stay at the top of the screen */
+  top: 0; /* Align to the top of the screen */
+  width: 100%; /* Full width of the screen */
+  background-color: var(--FailedMessage);
+  color: var(--Grey); /* White text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some padding for spacing */
+  display: none; /* Hide the message by default */
+}
+
+.passed-quiz-message {
+  position: fixed; /* Fixed position to stay at the top of the screen */
+  top: 0; /* Align to the top of the screen */
+  width: 100%; /* Full width of the screen */
+  background-color: var(--SuccessMessage);
+  color: var(--Grey); /* White text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some padding for spacing */
+  display: none; /* Hide the message by default */
+}
+
+
+.session-icons-container.pending::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000002f;
+}
+
+[id^='loading-message-E01S'] {
+  display: none; /* Hide the loader by default */
+  color: var(--Constrast);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.quiz-loader {
+  display: block;
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #cbb26a; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.newBadge {
+  background-color: var(--GoldenPrimary);
+  /* Set the background color of the badge */
+  color: var(--Constrast);
+  /* Set the text color of the badge */
+  font-size: 1rem;
+  /* Set the font size of the badge text */
+  padding: 0.2rem 0.5rem;
+  /* Add some padding around the badge text */
+  border-radius: 3px;
+  /* Add rounded corners to the badge */
+  margin-left: 2rem;
+  /* Adjust the spacing between the text and the badge */
+}
+
+.discord-img {
+  display: inline-block;
+  width: 1.1em;
+  position: absolute;
+  margin-left: 0.1rem;
+}
+
+.thanks-message {
+  color: var(--GoldenPrimary); /* White text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some padding for spacing */
+  display: none; /* Hide the message by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-size: 1.5rem;
+}

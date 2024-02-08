@@ -1,0 +1,138 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2.125em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc7c;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.625em;
+  width: 1.625em;
+  left: 0.25em;
+  bottom: 0.25em;
+  background-color: white;
+  -webkit-transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: var(--GoldenPrimary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--GoldenPrimary);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.625em);
+  -ms-transform: translateX(1.625em);
+  transform: translateX(1.625em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2.125em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+.switch__container > span {
+  font-size: 16px;
+  max-width: 90%;
+  width: 100%;
+}
+.switches__container {
+  display: grid;
+  max-width: 900px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 30px;
+  grid-column: 20px;
+  grid-template-columns: 25px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "s1 area1 area2"
+    "s2 area3 area4"
+    "s3 area5 area6"
+    "s4 area7 area8"
+    "s5 area9 area10";
+}
+.grid__container {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.s1 {
+  grid-area: s1;
+}
+.s2 {
+  grid-area: s2;
+}
+.s3 {
+  grid-area: s3;
+}
+.s4 {
+  grid-area: s4;
+}
+.s5 {
+  grid-area: s5;
+}
+.area1 {
+  grid-area: area1;
+}
+.area2 {
+  grid-area: area2;
+}
+.area3 {
+  grid-area: area3;
+}
+.area4 {
+  grid-area: area4;
+}
+.area5 {
+  grid-area: area5;
+}
+.area6 {
+  grid-area: area6;
+}
+.area7 {
+  grid-area: area7;
+}
+.area8 {
+  grid-area: area8;
+}
+.area9 {
+  grid-area: area9;
+}
+.area10 {
+  grid-area: area10;
+}

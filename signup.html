@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freedom Academy Registration</title>
+    <link rel="stylesheet" href="stylefa.css" />
+    <!-- Your CSS file with Freedom Academy styles -->
+    <!-- Import the Freedom Academy font (Google Fonts example) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=YourFreedomAcademyFont"
+      rel="stylesheet"
+    />
+    <script src="./javascript/fetchUrl.js"></script>
+
+    <!-- Ionicons icon CDN -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img2/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img2/site.webmanifest" />
+    <link rel="mask-icon" href="img2/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="top-icons">
+      <a href="https://juanifernandez.com/freedomacademy" class="icon-link">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="login-container" id="signup-container">
+      <div class="login-logo">
+        <img src="img/Logo-removebg.png" alt="" class="student-img" />
+      </div>
+      <div class="form-container">
+        <form class="signup-form" id="signup-form" method="post">
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="fullName">First & Second name (if any)</label>
+              <input type="text" id="fullName" name="fullName" required />
+              <span id="fullNameError" class="email-error-message"></span>
+            </div>
+            <div class="form-group col">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+              <span id="lastNameError" class="email-error-message"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="occupation">Occupation</label>
+              <input type="text" id="occupation" name="occupation" required />
+              <span id="occupationError" class="email-error-message"></span>
+            </div>
+            <div class="form-group col">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required />
+              <span id="dobError" class="email-error-message"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <span id="invalidEmailSpan" class="email-error-message"></span>
+              <span id="emailAlreadyExist" class="email-error-message"></span>
+            </div>
+            <div class="form-group col">
+              <label for="repeatedEmail">Repeat Email</label>
+              <input
+                type="email"
+                id="repeatedEmail"
+                name="repeatedEmail"
+                required
+              />
+              <span
+                id="emailValidationMessage"
+                class="email-error-message"
+              ></span>
+              <span
+                id="invalidRepeatedEmailSpan"
+                class="email-error-message"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="form-main-reason-container"
+            style="border-radius: 20px; padding: 10px"
+          >
+            <label for="mainIssue"
+              >Why are you here? Tell us what you want to improve</label
+            >
+            <textarea
+              id="mainIssue"
+              name="mainIssue"
+              rows="3"
+              cols="53"
+              style="font-size: 1rem; padding: 0.5rem"
+            ></textarea>
+          </div>
+          <button type="submit" id="registerButton">
+            <div class="button-text">Register</div>
+          </button>
+        </form>
+      </div>
+      <div id="successMessage" class="success-message" style="display: none">
+        Registration successful! You will be redirected shortly.
+      </div>
+    </div>
+
+    <div
+      id="registrationThanksMessage"
+      class="thanks-message"
+      style="display: none"
+    >
+      Gracias por sumarte a Freedom Academy! <br />
+      <br />
+      Por el momento tenemos suspendidas las nuevas incorporaciones. En algunas
+      semanas reabriremos el cupo. <br />
+      Queremos asegurarte una excelente experiencia de usuario antes de que te
+      puedas sumar. <br />
+      <br />
+      Te estaremos avisando a tu correo! <br />Saludos! <br />
+      <br />Juani
+    </div>
+
+    <!-- JavaScript for Redirect -->
+    <script src="./javascript/validations.js"></script>
+    <script>
+      document
+        .getElementById('registerButton')
+        .addEventListener('click', function (event) {
+          // Prevent the form from submitting immediately
+          event.preventDefault();
+          const fieldIds = {
+            fullName: 'fullNameError',
+            lastName: 'lastNameError',
+            occupation: 'occupationError',
+            dob: 'dobError',
+            email: 'invalidEmailSpan',
+            repeatedEmail: 'emailValidationMessage',
+          };
+
+          validateFields(fieldIds);
+
+          let email = document.getElementById('email');
+          let repeatedEmail = document.getElementById('repeatedEmail');
+
+          let invalidEmailSpan = document.getElementById('invalidEmailSpan');
+          invalidEmailSpan.textContent = '';
+          const invalidRepeatedEmailSpan = document.getElementById(
+            'invalidRepeatedEmailSpan'
+          );
+          invalidRepeatedEmailSpan.textContent = '';
+
+          const invalidEmail = validateEmail(email);
+          const invalidRepeatedEmail = validateEmail(repeatedEmail);
+
+          if (invalidEmail) {
+            invalidEmailSpan.textContent = 'Invalid email format.';
+            return;
+          }
+          if (invalidRepeatedEmail) {
+            invalidRepeatedEmailSpan.textContent = 'Invalid email format.';
+            return;
+          }
+
+          let emailValidationMessage = document.getElementById(
+            'emailValidationMessage'
+          );
+
+          if (email.value !== repeatedEmail.value) {
+            emailValidationMessage.textContent = 'Emails do not match.';
+            return;
+          }
+
+          const formData = {
+            fullName: document.getElementById('fullName').value,
+            lastName: document.getElementById('lastName').value,
+            dob: document.getElementById('dob').value,
+            occupation: document.getElementById('occupation').value,
+            email: document.getElementById('email').value,
+            repeatedEmail: document.getElementById('repeatedEmail').value,
+            mainIssue: document.getElementById('mainIssue').value || '',
+          };
+
+          const jsonData = JSON.stringify(formData);
+
+          fetch(
+            `${getScriptUrl()}?functionName=userRegistration`,
+            {
+              method: 'POST',
+              body: jsonData,
+              headers: {
+                'Content-Type': 'text/plain',
+              },
+            }
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.text();
+            })
+            .then((data) => {
+              try {
+                const responseObject = JSON.parse(data); // Parse the JSON data
+
+                if (responseObject.status === 'emailExist') {
+                  const emailAlreadyExist =
+                    document.getElementById('emailAlreadyExist');
+                  emailAlreadyExist.textContent =
+                    'Please choose another email.';
+                } else if (responseObject.status === 'success') {
+                  // TODO: ENABLE WHEN REGISTRATION AVAILABLE, LOGIC FOR AUTH REDIRECTION
+                  // const successMessage =
+                  //   document.getElementById('successMessage');
+                  // successMessage.style.display = 'block';
+                  // setTimeout(function () {
+                  //   successMessage.style.display = 'none';
+                  //   window.location.href =
+                  //     'https://juanifernandez.com/freedom-academy/auth';
+                  // }, 4000);
+                  const signUpContainer =
+                    document.getElementById('signup-container');
+                  signUpContainer.style.display = 'none';
+
+                  const thanksMessage = document.getElementById(
+                    'registrationThanksMessage'
+                  );
+                  thanksMessage.style.display = 'block';
+                } else {
+                  console.error(
+                    'Server response status:',
+                    responseObject.status
+                  );
+                }
+              } catch (error) {
+                console.error('Error parsing JSON:', error);
+              }
+            })
+            .catch((error) => {
+              console.error('Error fetching data:', error);
+            });
+        });
+    </script>
+  </body>
+</html>

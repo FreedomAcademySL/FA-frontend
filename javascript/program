@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylefa.css" />
+    <link rel="stylesheet" href="recommended-readings.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <title>Freedom Academy - Mentorship Program</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img2/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img2/site.webmanifest" />
+    <link rel="mask-icon" href="img2/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+
+    <style>
+      #loading-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+      #spinner {
+        display: block;
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #cbb26a; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-message">
+      <div id="spinner"></div>
+    </div>
+    <div id="content">
+      <header class="header-readings">
+        <div class="top-icons">
+          <a
+            href="https://juanifernandez.com/freedom-academy/program"
+            class="icon-link"
+          >
+            <ion-icon name="briefcase-outline"></ion-icon>
+          </a>
+          <a
+            href="https://juanifernandez.com/freedom-academy/recommended-readings"
+            class="icon-link"
+          >
+            <ion-icon name="glasses-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="program-header">
+          <img src="img/TrianglenoBG.png" alt="LogoLogin" />
+          <div class="program-title">Freedom Academy</div>
+          <div class="beta-test">Beta Version v1.0</div>
+          <div class="share-opinion-form" onClick="shareOpinionForm()">
+            Contanos que te gusta y que no de la plataforma
+          </div>
+          <a
+            class="share-opinion-form"
+            style="text-decoration: none"
+            href="mailto:juan.fernandez17@gmail.com"
+            target="_blank"
+          >
+            Dudas? Escribinos!
+          </a>
+        </div>
+      </header>
+
+      <div class="course-sessions">
+        <div class="progress-bar-container">
+          <div class="completion-percentage" id="completionPercentage"></div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="ul-li-container">
+          <ul class="sessions-ul">
+            <!-- Introduction -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">Intro</span>
+                <span class="session-title">Introduccion al Curso</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('Intro')"
+                  class="video-icon"
+                  name="videocam-outline"
+                ></ion-icon>
+                <a>
+                  <div style="width: 40px"></div>
+                </a>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+
+            <div class="session-video-player">
+              <div id="videoPlayer0"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer0"></div>
+            </div>
+
+            <!-- Separator -->
+            <li class="separator">
+              <div class="separator-text">Stage I</div>
+            </li>
+            <!-- Session 0 -->
+            <li class="sessions-li">
+              <!-- Loader -->
+
+              <div class="session-container">
+                <span class="session-number">S0</span>
+                <span class="session-title"
+                  >Fundamentos Básicos I: Energía</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S0')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S0HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick="toggleQuizQuestion('E01S0')"
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                  id="quizIcon-E01S0"
+                ></ion-icon>
+
+                <div id="loading-message-E01S0">
+                  <div class="quiz-loader" id="spinner-E01S0">
+                    <div class="spinner"></div>
+                  </div>
+                </div>
+
+                <span class="status-icon"></span>
+              </div>
+            </li>
+
+            <div class="session-video-player">
+              <div id="videoPlayer1"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer1"></div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz-container-E01S0">
+              <!-- Question 1 -->
+              <div
+                class="quiz-question"
+                data-session="E01S0"
+                id="question1-E01S0"
+              >
+                <p class="question-text">
+                  ¿Cual es el objetivo de Freedom Academy?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option1"
+                      id="E01S0-1"
+                    /> 
+                  Mejorar capacidad fisica y cognitiva
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option2"
+                      id="E01S0-1"
+                    />
+                  Escalar energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option3"
+                      id="E01S0-1"
+                    />
+                  Ordenarme
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option4*"
+                      id="E01S0-1"
+                    />
+                  Todas las anteriores
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+
+              <!-- Question 2 -->
+              <div
+                class="quiz-question"
+                data-session="E01S0"
+                id="question2-E01S0"
+              >
+                <p class="question-text">
+                  ¿Cuales son las 3 dimensiones del "Cubo de ENERGIA"?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option1"
+                      id="E01S0-2"
+                    />
+                    Energia Corporal, Energia Cognitiva, Felicidad
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option2"
+                      id="E01S0-2"
+                    />
+                    Energia Cognitiva, Recursos, Felicidad
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option3*"
+                      id="E01S0-2"
+                    />
+                    Energia Corporal, Recursos ($$$), Inteligencia (g)
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option4"
+                      id="E01S0-2"
+                    />
+                    Recursos ($$$), Sensacion de Bienestar, Energia
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 3 -->
+              <div
+                class="quiz-question"
+                data-session="E01S0"
+                id="question3-E01S0"
+              >
+                <p class="question-text">La Libertad depende...</p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option1*"
+                      id="E01S0-3"
+                    />
+                    Negativamente de la Entropia y positivamente de la Energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option2"
+                      id="E01S0-3"
+                    />
+                    Positivamente de la Entropia y positivamente de la Energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option3"
+                      id="E01S0-3"
+                    />
+                    Positivamente de la Entropia y negativamente de la Energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option4"
+                      id="E01S0-3"
+                    />
+                    Negativamente de la Entropía y negativamente de la Energía
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 4 -->
+              <div
+                class="quiz-question"
+                data-session="E01S0"
+                id="question4-E01S0"
+              >
+                <p class="question-text">
+                  ¿Que pasa cuando sube la cantidad de "Parasitos" o
+                  "Adicciones"?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option1"
+                      id="E01S0-4"
+                    />
+                    Sube la Energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option2"
+                      id="E01S0-4"
+                    />
+                    Sube la Entropia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option3"
+                      id="E01S0-4"
+                    />
+                    Cae la Energia y la Felicidad
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option3*"
+                      id="E01S0-4"
+                    />
+                    B y C son correctas
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 5 -->
+              <div
+                class="quiz-question"
+                data-session="E01S0"
+                id="question5-E01S0"
+              >
+                <p class="question-text">¿Que son los "leaks" de ENERGIA?</p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option1*"
+                      id="E01S0-5"
+                    />
+                    Actividades espurias que aceleran nuestra Entropia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option2"
+                      id="E01S0-5"
+                    />
+                    Tiempo que destinamos a cosas que bajan la Entropia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option3"
+                      id="E01S0-5"
+                    />
+                    Lugar por donde mejoramos nuestra Energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option4"
+                      id="E01S0-5"
+                    />
+                    Actividades espurias que desaceleran nuestra Entropia
+                  </label>
+                </div>
+              </div>
+              <div class="quiz-submit-container">
+                <button
+                  class="quiz-submit-button"
+                  onclick="submitQuiz('E01S0')"
+                >
+                  Enviar Respuesta
+                </button>
+              </div>
+            </div>
+
+            <!-- Session 1 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S1</span>
+                <span class="session-title"
+                  >Fundamentos Básicos II: Introducción a la Ingeniería de Hábitos</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S1')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S1HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick="toggleQuizQuestion('E01S1')"
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                  id="quizIcon-E01S1"
+                ></ion-icon>
+
+                <div id="loading-message-E01S1">
+                  <div class="quiz-loader" id="spinner-E01S1">
+                    <div class="spinner"></div>
+                  </div>
+                </div>
+
+                <span class="status-icon"></span>
+              </div>
+            </li>
+
+            <div class="session-video-player">
+              <div id="videoPlayer2"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer2"></div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz-container-E01S1">
+              <!-- Question 1 -->
+              <div
+                class="quiz-question"
+                data-session="E01S1"
+                id="question1-E01S1"
+              >
+                <p class="question-text">
+                  ¿Cual es el enfoque PRINCIPAL de Freedom Academy para escalar
+                  ENERGIA (Bienestar, Productividad, etc)?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option1"
+                      id="E01S1-1"
+                    />
+                    Ordenarnos
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option2*"
+                      id="E01S1-1"
+                    />
+                    Remover (lo estupido)
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option3"
+                      id="E01S1-1"
+                    />
+                    Aprender a decir que NO
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q1"
+                      value="option4"
+                      id="E01S1-1"
+                    />
+                    Ninguna de las anteriores
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+
+              <!-- Question 2 -->
+              <div
+                class="quiz-question"
+                data-session="E01S1"
+                id="question2-E01S1"
+              >
+                <p class="question-text">
+                  ¿Que pasa cuando me embarco en un proyecto que requiere mas
+                  ENERGIA de la que tengo?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option1"
+                      id="E01S1-2"
+                    />
+                    Suben drasticamente las probabilidades de que fracase
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option2"
+                      id="E01S1-2"
+                    />
+                    Me voy a frustrar
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option3"
+                      id="E01S1-2"
+                    />
+                    Mi estres y ansiedad van a subir
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q2"
+                      value="option4*"
+                      id="E01S1-2"
+                    />
+                    Todas las anteriores
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 3 -->
+              <div
+                class="quiz-question"
+                data-session="E01S1"
+                id="question3-E01S1"
+              >
+                <p class="question-text">El self-binding es...</p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option1"
+                      id="E01S1-3"
+                    />
+                    Una tecnica que incrementa la productividad (de manera
+                    directa o indirecta)
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option2"
+                      id="E01S1-3"
+                    />
+                    Una estrategia para evitar caer en tentaciones y conservar
+                    energia
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option3*"
+                      id="E01S1-3"
+                    />
+                    A y B son correctas
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q3"
+                      value="option4"
+                      id="E01S1-3"
+                    />
+                    Ninguna de las anteriores
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 4 -->
+              <div
+                class="quiz-question"
+                data-session="E01S1"
+                id="question4-E01S1"
+              >
+                <p class="question-text">
+                  ¿Que diferencia hay entre la Ingenieria de Habitos y la
+                  Ingenieria Atencional?
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option1*"
+                      id="E01S1-4"
+                    />
+                    La Ingenieria Atencional trabaja sobre triggers internos.
+                    La Ingenieria de Habitos sobre Triggers Externos
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option2"
+                      id="E01S1-4"
+                    />
+                    La Ingenieria Atencional sirve para no distraerse
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option3"
+                      id="E01S1-4"
+                    />
+                    La Ingenieria de Habitos apunta a mejorar nuestros habitos
+                    de manera inteligente
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q4"
+                      value="option4"
+                      id="E01S1-4"
+                    />
+                  Todas las anteriores
+                  </label>
+                </div>
+              </div>
+              <hr class="question-divider" />
+              <!-- Question 5 -->
+              <div
+                class="quiz-question"
+                data-session="E01S1"
+                id="question5-E01S1"
+              >
+                <p class="question-text">
+                  Conexion entre el "Cono de ENERGIA" y la Piramide de Maslow
+                </p>
+                <div class="options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option1"
+                      id="E01S1-5"
+                    />
+                  Ambas reflejan mejoras tras escalar ENERGIA
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option2*"
+                      id="E01S1-5"
+                    />
+                  Ambas muestran cambio de perspectiva/objetivos del
+                    individuo en base al dominio de los distintos realms
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option3"
+                      id="E01S1-5"
+                    />
+                  Todas las anteriores
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="q5"
+                      value="option4"
+                      id="E01S1-5"
+                    />
+                  Ninguna de las anteriores
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-submit-container">
+                <button
+                  class="quiz-submit-button"
+                  onclick="submitQuiz('E01S1')"
+                >
+                  Enviar Respuesta
+                </button>
+              </div>
+            </div>
+
+            <!-- Session 2 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S2</span>
+                <span class="session-title">Fundamentos Básicos III: Introducción a la Economía de la Atención</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S2')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S2HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer3"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer3"></div>
+            </div>
+            <!-- Session 3 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S3</span>
+                <span class="session-title">Mindset Para Escalar Energia </span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S3')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S3HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer4"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer4"></div>
+            </div>
+            <!-- Session 4 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S4</span>
+                <span class="session-title"
+                  >Homeostasis y Sistema de Recompensas I</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S4')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S4HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer5"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer5"></div>
+            </div>
+            <!-- Session 5 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S5</span>
+                <span class="session-title"
+                  >Homeostasis y Sistema de Recompensas II</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S5')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S5HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer6"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer6"></div>
+            </div>
+            <!-- Session 6 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S6</span>
+                <span class="session-title">Homeostasis y Sistema de Recompensas III</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S6')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S6HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer7"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer7"></div>
+            </div>
+            <!-- Session 7 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S7</span>
+                <span class="session-title">Irracionalidad Intertemporal</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S7')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S7HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer8"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer8"></div>
+            </div>
+            <!-- Session 8 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S8</span>
+                <span class="session-title">Energía y Carácter</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S8')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S8HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer9"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer9"></div>
+            </div>
+
+             <!-- Session 8 -->
+             <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S9</span>
+                <span class="session-title">Auto-Negociaciones</span>
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S8')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S8HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer9"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer9"></div>
+            </div>
+
+            <!-- Separator -->
+            <li class="separator">
+              <div class="separator-text">Stage II</div>
+            </li>
+
+            <!-- Assesment -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">Check</span>
+                <span class="session-title"
+                  >Assessment de Hábitos (Parásitos): Nutrición, Físico, Screen
+                  Time</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <a>
+                  <div style="width: 40px"></div>
+                </a>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer0"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer0"></div>
+            </div>
+            <!-- Session 9 -->
+            <li class="sessions-li">
+              <div class="session-container">
+                <span class="session-number">S9</span>
+                <span class="session-title"
+                  >Introducción a la Ingeniería Atencional y la Economía de la
+                  Atención</span
+                >
+              </div>
+              <div class="session-icons-container">
+                <ion-icon
+                  onClick="userClickCount('S9')"
+                  class="video-icon"
+                  name="videocam-outline"
+                  title="Session"
+                ></ion-icon>
+                <ion-icon
+                  onClick="userClickCount('S9HW')"
+                  class="notes-icon"
+                  name="document-outline"
+                  title="Homework"
+                ></ion-icon>
+                <ion-icon
+                  onClick=""
+                  class="quiz-icon"
+                  name="help-circle-outline"
+                  title="Quiz"
+                ></ion-icon>
+                <span class="status-icon"></span>
+              </div>
+            </li>
+            <div class="session-video-player">
+              <div id="videoPlayer10"></div>
+            </div>
+            <div class="session-notes-player">
+              <div id="notesPlayer10"></div>
+              <!-- Session 10 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S10</span>
+                  <span class="session-title">Poder y Restricciones</span>
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S10')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S10HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer10"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer10"></div>
+              </div>
+              <!-- Session 11 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S11</span>
+                  <span class="session-title">Entorno y Auto-Estima</span>
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S11')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S11HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer11"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer11"></div>
+              </div>
+              <!-- Session 12 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S12</span>
+                  <span class="session-title"
+                    >Californication: Surfeando un Entorno Crecientemente
+                    Dantesco</span
+                  >
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S12')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S12HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer12"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer12"></div>
+              </div>
+
+              <!-- Session 13 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S13</span>
+                  <span class="session-title"
+                    >Adicciones, ADHD y Robo Atencional: Conexión con la "Dark
+                    Psychology"</span
+                  >
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S13')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S13HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer13"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer13"></div>
+              </div>
+              <!-- Session 14 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S14</span>
+                  <span class="session-title"
+                    >Detox Atencional e Ingeniería Atencional: Saliendo de la
+                    Matrix</span
+                  >
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S14')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S14HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer14"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer14"></div>
+              </div>
+              <!-- Session 15 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number">S15</span>
+                  <span class="session-title"
+                    >Libertad y Propósito: Existencialismo Entrópico como
+                    "brújula filosófica" para hacer uso de la Libertad</span
+                  >
+                </div>
+                <div class="session-icons-container">
+                  <ion-icon
+                    onClick="userClickCount('S15')"
+                    class="video-icon"
+                    name="videocam-outline"
+                    title="Session"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick="userClickCount('S15HW')"
+                    class="notes-icon"
+                    name="document-outline"
+                    title="Homework"
+                  ></ion-icon>
+                  <ion-icon
+                    onClick=""
+                    class="quiz-icon"
+                    name="help-circle-outline"
+                    title="Quiz"
+                  ></ion-icon>
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+              <div class="session-video-player">
+                <div id="videoPlayer15"></div>
+              </div>
+              <div class="session-notes-player">
+                <div id="notesPlayer15"></div>
+              </div>
+              <!-- Separator -->
+              <li class="separator">
+                <div class="separator-text">Stage III</div>
+              </li>
+              <!-- Session 16 -->
+              <li class="sessions-li">
+                <div class="session-container">
+                  <span class="session-number"></span>
+                  <span class="session-title"
+                    >Sesiones Personalizadas - Premium Membership</span
+                  >
+                </div>
+                <div class="session-icons-container">
+                  <span class="status-icon"></span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="failedQuiz" class="fail-quiz-message" style="display: none">
+      You failed this quiz. Try again tomorrow!
+    </div>
+
+    <div id="passedQuiz" class="passed-quiz-message" style="display: none">
+      You passed this quiz. Congratulations!
+    </div>
+  </body>
+  <script src="./javascript/program.js"></script>
+  <script src="./javascript/validations.js"></script>
+</html>

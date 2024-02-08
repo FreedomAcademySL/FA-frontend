@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freedom Academy Login</title>
+    <link rel="stylesheet" href="stylefa.css" />
+    <script src="./javascript/fetchUrl.js"></script>
+    <!-- Your CSS file with Freedom Academy styles -->
+    <!-- Import the Freedom Academy font (Google Fonts example) -->
+
+    <!-- Ionicons icon CDN -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=YourFreedomAcademyFont"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img2/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img2/site.webmanifest" />
+    <link rel="mask-icon" href="img2/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      #loading-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+      #spinner {
+        display: block;
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #cbb26a; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #content {
+        display: none;
+      }
+    </style>
+
+    <style>
+      .login-email-input {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-message">
+      <div id="spinner"></div>
+    </div>
+    <div id="content">
+      <div class="top-icons">
+        <a href="https://juanifernandez.com" class="icon-link">
+          <ion-icon name="home-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="login-container">
+        <div class="login-logo">
+          <a href="https://juanifernandez.com/freedomacademy">
+            <img src="img/Logo-removebg.png" alt="" class="student-img" />
+          </a>
+        </div>
+        <div class="form-container">
+          <form class="signup-form" method="post">
+            <div class="login-email-container">
+              <label for="email">Email</label>
+              <input
+                class="login-email-input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+              <span id="invalidEmailSpan" class="email-error-message"></span>
+            </div>
+            <button class="login-button-style" type="submit" id="loginButton">
+              <div class="login-button-text">Login</div>
+            </button>
+            <a
+              href="https://juanifernandez.com/freedom-academy/signup"
+              class="login-link-button"
+              >Unirme a Freedom Academy</a
+            >
+          </form>
+        </div>
+        <div id="cantAccess" style="display: none">
+          Please talk with the administration.
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/validations.js"></script>
+    <script src="./javascript/auth.js"></script>
+
+    <script>
+      document
+        .getElementById('loginButton')
+        .addEventListener('click', function (event) {
+          // Prevent the form from submitting immediately
+          event.preventDefault();
+          const fieldId = {
+            email: 'invalidEmailSpan',
+          };
+
+          validateFields(fieldId);
+
+          const formData = {
+            email: document.getElementById('email').value,
+          };
+
+          const jsonData = JSON.stringify(formData);
+
+          fetch(
+            `${getScriptUrl()}?functionName=userLogin`,
+            {
+              method: 'POST',
+              body: jsonData,
+              headers: {
+                'Content-Type': 'text/plain',
+              },
+            }
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.text();
+            })
+            .then((data) => {
+              try {
+                const responseObject = JSON.parse(data); // Parse the JSON data
+
+                if (responseObject.status === 'success') {
+                  const userId = responseObject.userId;
+                  setCookie('userId', userId, 10);
+                  window.location.href = `https://juanifernandez.com/freedom-academy/program`;
+                } else if (responseObject.status === 'cantAccess') {
+                  const cantAccess = document.getElementById('cantAccess');
+                  cantAccess.style.display = 'block';
+                } else {
+                  console.error(
+                    'Server response status:',
+                    responseObject.status
+                  );
+                }
+              } catch (error) {
+                console.error('Error parsing JSON:', error);
+              }
+            })
+            .catch((error) => {
+              console.error('Error fetching data:', error);
+            });
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,185 @@
+#sheetLink, #monitorLink {
+  width: 100%;
+  padding: 8px;
+  padding-inline: 16px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #00ac47;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+#monitorLink{
+
+  background-color: #a4a4a4;
+}
+#sheetLink svg, #monitorLink svg{
+  margin-right: 10px;
+}
+#sheetLink:hover {
+  background-color: #008c3a;
+}
+#monitorLink:hover {
+  background-color: #848484;
+}
+.sheet__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  width: fit-content;
+  height: fit-content;
+  min-height: 100px;
+}
+.typing__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.typing__container {
+  transform: scale(1.5);
+}
+.css-typing p {
+  border-right: 0.15em solid orange;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  margin: 0 auto;
+  width: 120px;
+  -webkit-animation: type 2s steps(15, end);
+  animation: type 2s steps(15, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  margin: 0 auto;
+  width: 8em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(14, end);
+  animation: type2 2s steps(14, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type3 5s steps(46, end),
+    blink 0.5s step-end infinite alternate;
+  animation: type3 5s steps(46, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}

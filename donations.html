@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/donations.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/leaderboard.css" />
+    <link rel="stylesheet" href="./recommended-readings.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img2/favicon-16x16.png"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freedom Academy - Leaderboard</title>
+  </head>
+  <style>
+    #loading-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+    #spinner {
+      display: block;
+      border: 8px solid #f3f3f3; /* Light grey */
+      border-top: 8px solid #cbb26a; /* Blue */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    #content {
+      display: none;
+    }
+  </style>
+  <body>
+    <div id="loading-message">
+      <div id="spinner"></div>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <div class="navbar__container">
+          <div class="top-navbar">
+            <a
+              class="navbar-link navbar-active"
+              target="_blank"
+              href="https://juanifernandez.com/freedom-academy/donations"
+              >Donations</a
+            >
+            <a
+              class="navbar-link"
+              target="_blank"
+              href="https://forms.gle/WM2Y798Tdn1S2tGF7"
+              >Feedback</a
+            >
+            <a
+              class="navbar-link"
+              target="_blank"
+              href="mailto:juan.fernandez17@gmail.com"
+              >Contacto</a
+            >
+          </div>
+          <div class="top-icons">
+            <a
+              href="https://juanifernandez.com/freedom-academy/program"
+              class="icon-link"
+            >
+              <ion-icon name="briefcase-outline" title="Program" />
+            </a>
+            <a
+              href="https://juanifernandez.com/freedom-academy/recommended-readings"
+              class="icon-link"
+            >
+              <ion-icon name="glasses-outline" title="Recommended-readings" />
+            </a>
+            <a
+              class="icon-link"
+              href="http://juanifernandez.com/freedom-academy/leaderboard"
+            >
+              <ion-icon name="podium-outline"></ion-icon>
+            </a>
+            <a
+              href="https://discord.gg/RxQWyYdFeG"
+              class="icon-link"
+              target="_blank"
+            >
+              <img
+                src="./img/discord-outline.svg"
+                alt="discord-icon"
+                class="discord-img"
+                title="Discord"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <section class="donations__container">
+        <p>
+          Estamos convencidos de que Freedom Academy podría ayudar a mucha gente
+          a estar mejor que nunca. <br /><br />
+          Pero todavía no estamos ahí. La plataforma actual todavía tiene mucho
+          que mejorar. <br />
+          Ya sabemos qué y como hacerlo, pero necesitarìamos más recursos para
+          llegar a ese punto lo antes posible, para lograr implementar
+          rápidamente una versión con la que podamos lograrlo. <br /><br />
+          Es que, cuanto antes iteremos el proyecto, más rápido podremos
+          ayudarte y ayudar a mucha gente que hoy también lo necesita. Freedom
+          Academy te necesita
+        </p>
+
+        <h3>Apoyanos con un Cafecito!</h3>
+        <div class="donations-tiers__container">
+          <div class="donations-card__container">
+            <h4>Donacion Premium</h4>
+            A los donantes "Premium" se les enviara gratis la 2da edicion
+            digital del LIBERTAD PARA GENTE INTELIGENTE (cuando salga)
+            <span> $4999 </span>
+            <a
+              style="display: block; margin-block: 8px"
+              href="https://cafecito.app/freedomacademy/plans"
+              rel="noopener"
+              target="_blank"
+              ><img
+                style="height: 25px; width: 120px"
+                srcset="
+                  https://cdn.cafecito.app/imgs/buttons/button_5.png       1x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_2x.png    2x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x
+                "
+                src="https://cdn.cafecito.app/imgs/buttons/button_5.png"
+                alt="Invitame un café en cafecito.app"
+            /></a>
+          </div>
+          <div class="donations-card__container">
+            <h4>Donacion Intermedia</h4>
+            Donacion Premium para costear los gastos de la plataforma
+            <span> $999 </span>
+            <a
+              style="display: block; margin-block: 8px"
+              href="https://cafecito.app/freedomacademy/plans"
+              rel="noopener"
+              target="_blank"
+              ><img
+                style="height: 25px; width: 120px"
+                srcset="
+                  https://cdn.cafecito.app/imgs/buttons/button_5.png       1x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_2x.png    2x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x
+                "
+                src="https://cdn.cafecito.app/imgs/buttons/button_5.png"
+                alt="Invitame un café en cafecito.app"
+            /></a>
+          </div>
+          <div class="donations-card__container">
+            <h4>Donacion Basica</h4>
+            Donacion Premium para costear los gastos de la plataforma
+            <span> $499 </span>
+            <a
+              style="display: block; margin-block: 8px"
+              href="https://cafecito.app/freedomacademy/plans"
+              rel="noopener"
+              target="_blank"
+              ><img
+                style="height: 25px; width: 120px"
+                srcset="
+                  https://cdn.cafecito.app/imgs/buttons/button_5.png       1x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_2x.png    2x,
+                  https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x
+                "
+                src="https://cdn.cafecito.app/imgs/buttons/button_5.png"
+                alt="Invitame un café en cafecito.app"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./javascript/fetchUrl.js"></script>
+  <script src="./javascript/validations.js"></script>
+  <script>
+    validateUser();
+  </script>
+</html>
