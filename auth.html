@@ -147,16 +147,13 @@
 
           const jsonData = JSON.stringify(formData);
 
-          fetch(
-            `${getScriptUrl()}?functionName=userLogin`,
-            {
-              method: 'POST',
-              body: jsonData,
-              headers: {
-                'Content-Type': 'text/plain',
-              },
-            }
-          )
+          fetch(`${getScriptUrl()}?functionName=userLogin`, {
+            method: 'POST',
+            body: jsonData,
+            headers: {
+              'Content-Type': 'text/plain',
+            },
+          })
             .then((response) => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -189,6 +186,5 @@
             });
         });
     </script>
-
   </body>
 </html>
