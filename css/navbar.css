@@ -90,7 +90,7 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  width: 1433px;
+  max-width: 1433px;
   margin: 0 auto;
 }
 .navbar {
