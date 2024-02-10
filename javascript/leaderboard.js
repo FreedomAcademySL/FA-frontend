@@ -1,6 +1,5 @@
 function getTableData() {
-  const userIdCookieName = "userId";
-  const userId = getCookie(userIdCookieName);
+  const userId = getIdOrGetCookie();
   if (userId) {
     const url = `${getScriptUrl()}?functionName=getListQuizCompletion`;
     return fetch(url, {

@@ -27,7 +27,7 @@ if (typeof window != 'undefined' && window.document) {
   }
 
   async function verifyUser() {
-    const userId = getCookie('userId');
+    const userId = getIdOrGetCookie();
 
     if (userId) {
       const url = `${getScriptUrl()}?functionName=verifyUserId&userId=${userId}`;

@@ -15,7 +15,7 @@ function getCookie(name) {
 
 async function verifyUserId() {
   const userIdCookieName = "userId";
-  const userId = getCookie(userIdCookieName);
+  const userId = getIdOrGetCookie();
   if (userId) {
     const url = `${getScriptUrl()}?functionName=verifyUserId&userId=${userId}`;
 
@@ -34,7 +34,7 @@ async function verifyUserId() {
       .then((data) => {
         try {
           const responseObject = JSON.parse(data);
-
+          debugger
           if (responseObject.status === "success") {
             window.location.href = `https://juanifernandez.com/freedom-academy/program`;
           } else if (responseObject.status === "cantAccess") {

@@ -60,7 +60,7 @@ if (typeof window != "undefined" && window.document) {
   ];
 
   async function fetchUser() {
-    const userId = getCookie("userId");
+    const userId = getIdOrGetCookie();;
     
 
     if (userId) {
@@ -125,7 +125,7 @@ if (typeof window != "undefined" && window.document) {
   }
 
   function toggleQuizQuestion(index) {
-    const userId = getCookie("userId");
+    const userId = getIdOrGetCookie();;
 
 
      
@@ -388,7 +388,7 @@ if (typeof window != "undefined" && window.document) {
   };
 
   async function sendNewSessionEmail(sessionNumber) {
-    const userId = getCookie("userId");
+    const userId = getIdOrGetCookie();;
 
 
      
@@ -595,7 +595,7 @@ if (typeof window != "undefined" && window.document) {
   }
 }
 function updateSheetStatus() {
-  const userId = getCookie("userId");
+  const userId = getIdOrGetCookie();;
 
 
    
@@ -646,7 +646,7 @@ function shareOpinionForm() {
 }
 
 async function userClickCount(clickName) {
-  const userId = getCookie("userId");
+  const userId = getIdOrGetCookie();;
 
 
    
@@ -686,7 +686,7 @@ async function userClickCount(clickName) {
 }
 
 async function sendQuiz(quizNumber, quizAnswer) {
-  const userId = getCookie("userId");
+  const userId = getIdOrGetCookie();;
 
 
    
@@ -822,7 +822,7 @@ const getLiContainerByIndex = (index) => {
   );
 };
 async function sendQuizCompletion() {
-  const userId = getCookie("userId");
+  const userId = getIdOrGetCookie();;
 
 
    

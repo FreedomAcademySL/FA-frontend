@@ -45,6 +45,11 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--GoldenPrimary);
 }
 
+.monitor__subtitle{
+  margin-block: 24px;
+  max-width: 600px;
+  text-align:justify 
+}
 input:checked + .slider:before {
   -webkit-transform: translateX(1.625em);
   -ms-transform: translateX(1.625em);
