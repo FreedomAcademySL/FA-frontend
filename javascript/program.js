@@ -60,8 +60,7 @@ if (typeof window != "undefined" && window.document) {
   ];
 
   async function fetchUser() {
-    const userId = getIdOrGetCookie();;
-    
+    const userId = getIdOrGetCookie();
 
     if (userId) {
       const url = `${getScriptUrl()}?functionName=verifyUserId&userId=${userId}&isCount=true`;
@@ -125,10 +124,7 @@ if (typeof window != "undefined" && window.document) {
   }
 
   function toggleQuizQuestion(index) {
-    const userId = getIdOrGetCookie();;
-
-
-     
+    const userId = getIdOrGetCookie();
 
     if (userId) {
       const url = `${getScriptUrl()}?functionName=getQuizInformation&userId=${userId}&quizNumber=${index}`;
@@ -254,7 +250,7 @@ if (typeof window != "undefined" && window.document) {
           session.querySelector(".status-icon").classList.add("done");
         }
       } else if (daysSinceBaseDate >= 7 * (index - 1)) {
-        const sessionKey = `E01S${index - 1}`;
+        const sessionKey = index === 11 ? "OUTRO" : `E01S${index - 1}`;
         const sessionResultValue = getSessionResult(sessionStatus, sessionKey);
         if (session.querySelector(".status-icon")) {
           if (sessionResultValue === "FAILED") {
@@ -289,7 +285,7 @@ if (typeof window != "undefined" && window.document) {
         if (quizIcon) {
           quizIcon.style.pointerEvents = "auto"; // Enable the icon
         }
-      } else if (index < 12) {
+      } else if (index < 11) {
         session.querySelector(".status-icon").textContent = "Pending";
         session.querySelector(".status-icon").classList.add("pending");
         const videoIcon = session.querySelector(".video-icon");
@@ -388,10 +384,7 @@ if (typeof window != "undefined" && window.document) {
   };
 
   async function sendNewSessionEmail(sessionNumber) {
-    const userId = getIdOrGetCookie();;
-
-
-     
+    const userId = getIdOrGetCookie();
 
     if (userId) {
       const url = `${getScriptUrl()}?functionName=newSessionEmail&userId=${userId}&sessionNumber=${sessionNumber}`;
@@ -595,10 +588,7 @@ if (typeof window != "undefined" && window.document) {
   }
 }
 function updateSheetStatus() {
-  const userId = getIdOrGetCookie();;
-
-
-   
+  const userId = getIdOrGetCookie();
 
   if (userId) {
     const url = `${getScriptUrl()}?functionName=getPlanillaIfExists&userId=${userId}`;
@@ -646,15 +636,15 @@ function shareOpinionForm() {
 }
 
 async function userClickCount(clickName) {
-  const userId = getIdOrGetCookie();;
+  const userId = getIdOrGetCookie();
 
-
-   
   const url = `${getScriptUrl()}?functionName=clickCount&clickName=${clickName}&userId=${userId}`;
 
-  const introSessionElement = document.querySelector(
-    ".sessions-li:first-child"
-  );
+  let introSessionElement = document.querySelector(".sessions-li:first-child");
+  if (clickName === "OUTRO") {
+    introSessionElement = document.querySelector(".sessions-li.outro");
+    console.log(introSessionElement);
+  }
   introSessionElement.querySelector(".status-icon").textContent = "Passed";
   introSessionElement.querySelector(".status-icon").classList.add("passed");
 
@@ -686,10 +676,7 @@ async function userClickCount(clickName) {
 }
 
 async function sendQuiz(quizNumber, quizAnswer) {
-  const userId = getIdOrGetCookie();;
-
-
-   
+  const userId = getIdOrGetCookie();
 
   if (userId) {
     const url = `${getScriptUrl()}?functionName=submitQuiz&userId=${userId}&quizNumber=${quizNumber}&quizAnswer=${quizAnswer}`;
@@ -822,10 +809,7 @@ const getLiContainerByIndex = (index) => {
   );
 };
 async function sendQuizCompletion() {
-  const userId = getIdOrGetCookie();;
-
-
-   
+  const userId = getIdOrGetCookie();
 
   if (userId) {
     const url = `${getScriptUrl()}?functionName=setQuizCompletion&userId=${userId}`;
