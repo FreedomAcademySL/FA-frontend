@@ -94,9 +94,6 @@ function validateUser() {
   }
 }
 function getIdOrGetCookie() {
-  // const userId = getCookie("userId");
-  // const userId = 1236 // Juani
-  // const userId = 84119042 //Cris
-  const userId = 10392407 //Juan
+  const userId = getCookie("userId");
   return userId;
 }

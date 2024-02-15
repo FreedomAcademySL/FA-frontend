@@ -34,7 +34,6 @@ async function verifyUserId() {
       .then((data) => {
         try {
           const responseObject = JSON.parse(data);
-          debugger
           if (responseObject.status === "success") {
             window.location.href = `https://juanifernandez.com/freedom-academy/program`;
           } else if (responseObject.status === "cantAccess") {
