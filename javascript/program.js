@@ -260,8 +260,13 @@ if (typeof window != "undefined" && window.document) {
             session.querySelector(".status-icon").textContent = "Passed";
             session.querySelector(".status-icon").classList.add("passed");
           } else {
-            session.querySelector(".status-icon").textContent = "Take Quiz";
-            session.querySelector(".status-icon").classList.add("done");
+            if (index === 11) {
+              session.querySelector(".status-icon").textContent = "WATCH";
+              session.querySelector(".status-icon").classList.add("done");
+            } else {
+              session.querySelector(".status-icon").textContent = "Take Quiz";
+              session.querySelector(".status-icon").classList.add("done");
+            }
           }
         }
 
@@ -285,7 +290,7 @@ if (typeof window != "undefined" && window.document) {
         if (quizIcon) {
           quizIcon.style.pointerEvents = "auto"; // Enable the icon
         }
-      } else if (index < 11) {
+      } else if (index < 12) {
         session.querySelector(".status-icon").textContent = "Pending";
         session.querySelector(".status-icon").classList.add("pending");
         const videoIcon = session.querySelector(".video-icon");
