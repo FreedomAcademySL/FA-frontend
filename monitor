@@ -152,9 +152,10 @@
       </header>
       <div class="grid__container">
         <div class="switches__container">
-          <span class="s1">S3</span>
-          <div class="switch__container">
-            <span>Configurar Despertador</span>
+          <span class="intro">Sesion 0</span>
+          <span class="s3">Sesion 3</span>
+          <div class="switch__container area3">
+            <span>Conseguir Despertador</span>
             <label class="switch">
               <input
                 class="mileston__checkbox"
@@ -164,8 +165,8 @@
               <span class="slider"></span>
             </label>
           </div>
-          <span class="s2">S4</span>
-          <div class="switch__container">
+          <span class="s4">Sesion 4</span>
+          <div class="switch__container area2">
             <span>Mirar "Karate Kid I"</span>
             <label class="switch">
               <input
@@ -176,8 +177,8 @@
               <span class="slider"></span>
             </label>
           </div>
-          <span class="s3">S5</span>
-          <div class="switch__container">
+          <span class="s5">Sesion 5</span>
+          <div class="switch__container area1">
             <span>Conseguir Soga</span>
             <label class="switch">
               <input
@@ -188,8 +189,8 @@
               <span class="slider"></span>
             </label>
           </div>
-          <span class="s4">S6</span>
-          <div class="switch__container">
+          <span class="s6">Sesion 6</span>
+          <div class="switch__container area8">
             <span>Ver Episodio Rick N' Morty (S02E04)</span>
             <label class="switch">
               <input
@@ -200,8 +201,8 @@
               <span class="slider"></span>
             </label>
           </div>
-          <span class="s5">S7</span>
-          <div class="switch__container">
+          <span class="s7">Sesion 7</span>
+          <div class="switch__container area9">
             <span>Instalar Extensiones Chrome (Stay Focusd)</span>
             <label class="switch">
               <input
@@ -212,7 +213,7 @@
               <span class="slider"></span>
             </label>
           </div>
-          <div class="switch__container">
+          <div class="switch__container area16">
             <span>Ver "28 Dias" (Pelicula)</span>
             <label class="switch">
               <input
@@ -223,7 +224,7 @@
               <span class="slider"></span>
             </label>
           </div>
-          <div class="switch__container">
+          <div class="switch__container area11">
             <span>Bajar tiempo de Extensiones de Chrome (Bajar un 20%)</span>
             <label class="switch">
               <input
@@ -234,7 +235,7 @@
               <span class="slider"></span>
             </label>
           </div>
-          <div class="switch__container">
+          <div class="switch__container area14">
             <span>Ver "The Matrix"</span>
             <label class="switch">
               <input
@@ -256,6 +257,77 @@
               <span class="slider"></span>
             </label>
           </div>
+          <div class="switch__container area0">
+            <span>Enviar Selfie #1 (Antes)</span>
+            <label class="switch">
+              <input
+                class="mileston__checkbox"
+                onclick="updateData()"
+                type="checkbox"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="switch__container">
+            <span>Envio Selfie #2 (Despues)</span>
+            <label class="switch">
+              <input
+                class="mileston__checkbox"
+                onclick="updateData()"
+                type="checkbox"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="switch__container area5">
+            <span>Configurar Despertador (Empezar a usar)</span>
+            <label class="switch">
+              <input
+                class="mileston__checkbox"
+                onclick="updateData()"
+                type="checkbox"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="switch__container area6">
+            <span>Test adicciones</span>
+            <label class="switch">
+              <input
+                class="mileston__checkbox"
+                onclick="updateData()"
+                type="checkbox"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+       
+          <div class="switch__container area12">
+            <span>Ver "El Naufrago" (Pelicula)</span>
+            <label class="switch">
+              <input
+                class="mileston__checkbox"
+                onclick="updateData()"
+                type="checkbox"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="area01">
+
+          </div>
+          <div class="area7">
+
+          </div>
+          <div class="area4">
+
+          </div>
+          <div class="area10">
+
+          </div>
+          <span class="s8">Sesion 8</span>
+          <span class="s9">Sesion 9</span>
+          <span class="outro">Outro</span>
         </div>
       </div>
       <div style="width: 600px; margin: 0 auto">
