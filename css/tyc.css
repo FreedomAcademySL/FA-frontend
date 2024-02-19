@@ -1,0 +1,38 @@
+#content .tyc__container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  text-align: justify;
+}
+#content .tyc__container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  font-weight: 300;
+  margin-block: 24px;
+  margin-top: 64px;
+}
+#content .tyc__container h2 b {
+  font-weight: 700;
+}
+
+#content .tyc__container p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-block: 16px;
+}
+#content .tyc__container p:last-child {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4em;
+  padding-bottom: 200px;
+}
+@media (max-width: 768px) {
+  #content .tyc__container {
+    width: auto;
+    margin: 0 16px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+}

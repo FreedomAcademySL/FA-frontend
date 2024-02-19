@@ -2,6 +2,7 @@ if (typeof window != "undefined" && window.document) {
   document.addEventListener("DOMContentLoaded", () => {
     fetchUser()
       .then((data) => {
+        showTyc();
         updateEnableDates(data.subscriptionDate);
         updateSessionStatus(
           data.subscriptionDate,
@@ -843,3 +844,15 @@ async function sendQuizCompletion() {
     window.location.href = "https://juanifernandez.com";
   }
 }
+const showTyc = () => {
+  const tyc = localStorage.getItem("tyc")
+    ? JSON.parse(localStorage.getItem("tyc"))
+    : false;
+  console.log("TYC", tyc);
+
+  if (!tyc) {
+    document.getElementById("myModal").style.display = "block";
+  } else {
+    document.getElementById("myModal").style.display = "none";
+  }
+};

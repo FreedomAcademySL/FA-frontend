@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/leaderboard.css" />
+    <link rel="stylesheet" href="./recommended-readings.css" />
+    <link rel="stylesheet" href="./css/tyc.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img2/favicon-16x16.png"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freedom Academy - Leaderboard</title>
+  </head>
+  <style>
+    #loading-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+    #spinner {
+      display: block;
+      border: 8px solid #f3f3f3; /* Light grey */
+      border-top: 8px solid #cbb26a; /* Blue */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #content {
+      display: none;
+    }
+  </style>
+  <body>
+    <div id="loading-message">
+      <div id="spinner"></div>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <div class="navbar__container">
+          <div class="top-navbar">
+            <a
+              class="navbar-link navbar-active"
+              target="_blank"
+              href="https://juanifernandez.com/freedom-academy/donations"
+              >Donations</a
+            >
+            <a
+              class="navbar-link"
+              target="_blank"
+              href="https://forms.gle/WM2Y798Tdn1S2tGF7"
+              >Feedback</a
+            >
+            <a
+              class="navbar-link"
+              target="_blank"
+              href="mailto:juan.fernandez17@gmail.com"
+              >Contacto</a
+            >
+          </div>
+          <div class="top-icons">
+            <a
+              href="https://juanifernandez.com/freedom-academy/program"
+              class="icon-link"
+            >
+              <ion-icon name="briefcase-outline" title="Program" />
+            </a>
+            <a
+              href="https://juanifernandez.com/freedom-academy/recommended-readings"
+              class="icon-link"
+            >
+              <ion-icon name="glasses-outline" title="Recommended-readings" />
+            </a>
+            <a
+              class="icon-link"
+              href="http://juanifernandez.com/freedom-academy/leaderboard"
+            >
+              <ion-icon name="podium-outline"></ion-icon>
+            </a>
+            <a
+              href="https://discord.gg/RxQWyYdFeG"
+              class="icon-link"
+              target="_blank"
+            >
+              <img
+                src="./img/discord-outline.svg"
+                alt="discord-icon"
+                class="discord-img"
+                title="Discord"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tyc__container">
+        <h2>Términos y Condiciones de <b>Freedom Academy</b></h2>
+        <p>
+          Bienvenido a Freedom Academy, una plataforma de mentoría diseñada para
+          ofrecer sesiones teóricas sobre diversos temas relacionados con el
+          desarrollo personal y el bienestar. Antes de participar en nuestro
+          programa, te solicitamos que leas detenidamente los siguientes
+          términos y condiciones:
+        </p>
+
+        <p>
+          1-Participación Voluntaria: La mentoría en Freedom Academy es
+          completamente voluntaria y los participantes tienen la libertad de
+          abandonar el programa en cualquier momento sin penalización alguna.
+        </p>
+        <p>
+          2-Consulta Profesional: Reconocemos la importancia de la salud mental
+          y física. Por lo tanto, los participantes deben entender que la
+          mentoría no sustituye la consulta con profesionales de la salud
+          mental. Ante cualquier duda o inquietud relacionada con su salud
+          mental, recomendamos encarecidamente consultar con psicólogos
+          especializados y/o psiquiatras.
+        </p>
+
+        <p>
+          3-Evaluación Médica: Antes de participar en cualquier actividad física
+          propuesta en Freedom Academy, se recomienda encarecidamente que los
+          participantes consulten con un médico especializado para garantizar
+          que están físicamente aptos para realizar dichas actividades.
+        </p>
+
+        <p>
+          4-Privacidad y Uso de Datos: Al registrarse en Freedom Academy, los
+          participantes otorgan su consentimiento para que utilicemos sus datos
+          con el fin de mejorar y optimizar tanto el programa como la
+          plataforma. Los datos recopilados no serán vendidos a terceros, pero
+          podrán ser utilizados internamente para fines de análisis y mejora
+          continua. Además, parte de estos datos podrán ser visibles dentro de
+          la plataforma, como en rankings públicos. Si un participante desea
+          mantener su anonimato, tiene la opción de utilizar un seudónimo al
+          registrarse. Sin embargo, el nombre con el que se registre será
+          visible dentro de la plataforma. Si no estás de acuerdo con estas
+          condiciones, te recomendamos no participar en el programa.
+        </p>
+        <p>
+          5-Propiedad Intelectual: Todo el contenido proporcionado en Freedom
+          Academy, incluyendo las sesiones teóricas, cuestionarios y materiales
+          relacionados, son contenido original y están protegidos por derechos
+          de autor. Estos materiales son propiedad exclusiva de Juan Ignacio
+          Fernandez, fundador de Freedom Academy, y no pueden ser reproducidos,
+          distribuidos o utilizados fuera del ámbito de Freedom Academy sin
+          autorización expresa del propietario.
+        </p>
+
+        <p>
+          6-Exención de Responsabilidad: En Freedom Academy, brindamos
+          orientación teórica y seguimos un protocolo avalado por un psicólogo
+          profesional especializado en terapia cognitivo conductual. Nuestro
+          enfoque se centra en la gradual eliminación de adicciones y la mejora
+          de hábitos en general. Sin embargo, si bien los resultados en promedio
+          son objetivamente alentadores en materia de reducción de adicciones,
+          mejora del bienestar y motivación, no nos hacemos responsables de los
+          resultados individuales obtenidos por los participantes. Esto se debe
+          a que la dinámica de la mentoría implica factores que quedan fuera de
+          nuestro alcance y sobre los cuales no tenemos conocimiento ni control.
+          Es importante destacar que Freedom Academy no asume responsabilidad
+          por eventos personales o traumas que puedan surgir durante el curso
+          del programa. El programa está diseñado y llevado a cabo con la buena
+          fe del fundador, y los participantes comprenden y aceptan que nuestra
+          mentoría se limita a proporcionar orientación y seguimiento dentro del
+          marco establecido, y que cualquier resultado personal es
+          responsabilidad exclusiva del participante. Recomendamos
+          encarecidamente que los participantes consulten con especialistas en
+          salud mental para abordar cualquier preocupación personal que puedan
+          tener. En caso de no estar conformes con los resultados o la
+          situación, los participantes tienen la opción de abandonar la mentoría
+          en cualquier momento.
+        </p>
+
+        <p>
+          Al participar en Freedom Academy, aceptas cumplir con estos términos y
+          condiciones. Te recordamos que estos términos están sujetos a cambios
+          periódicos y te recomendamos revisarlos regularmente para estar al
+          tanto de cualquier actualización. Si tienes alguna pregunta o
+          inquietud sobre estos términos, no dudes en contactarnos.
+        </p>
+
+        <p>
+          <b> Juan Ignacio Fernandez </b>
+          Fundador de Freedom Academy
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="./javascript/fetchUrl.js"></script>
+  <script src="./javascript/validations.js"></script>
+  <script>
+    validateUser();
+  </script>
+</html>

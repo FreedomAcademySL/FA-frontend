@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/sheetSection.css" />
     <link rel="stylesheet" href="recommended-readings.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -3314,9 +3315,7 @@
             <li class="sessions-li outro">
               <div class="session-container">
                 <span class="session-number">Outro</span>
-                <span class="session-title"
-                  >Finalizacion de Stage I</span
-                >
+                <span class="session-title">Finalizacion de Stage I</span>
               </div>
               <div class="session-icons-container">
                 <ion-icon
@@ -3651,8 +3650,24 @@
     <div id="passedQuiz" class="passed-quiz-message" style="display: none">
       You passed this quiz. Congratulations!
     </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+       
+        <label for="tyccheckbox">
+          <input type="checkbox" name="tyccheckbox" id="tyccheckbox" /> He leido y acepto los
+          <a
+            target="_blank"
+            href="https://juanifernandez.com/freedom-academy/terminosycondiciones"
+            >Terminos y condiciones</a
+          >
+        </label>
+        <span class="close">Continuar</span>
+      </div>
+    </div>
   </body>
   <script src="./javascript/fetchUrl.js"></script>
   <script src="./javascript/program.js"></script>
+  <script src="./javascript/modal.js"></script>
   <script src="./javascript/validations.js"></script>
 </html>
